@@ -1,0 +1,81 @@
+.banner{
+    height: 300px;
+    background: url('../../../assets/img/background-banner.jpg') no-repeat;
+    background-size: cover;
+}
+.banner .bg-banner{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222831a8;
+}
+.banner .content{
+    height: 100%;
+}
+.banner .content .title{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.profile{
+    height: 300px;
+    background-color: var(--color-primary);
+}
+.profile .profile-text-guest{
+    height: 100%;
+}
+
+.games .title{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.games .game{
+    position: relative;
+    width: 250px;
+    height: 330px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.games .game .game-image{
+    width: 100%;
+    height: 100%;
+}
+.games .game .game-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.games .game .game-name{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.games .game:hover .game-name{
+    background-color: rgba(0, 0, 0, 0.468);
+    visibility: visible;
+}
+
+.profile{
+    margin: 0;
+}
+.profile .profile-text-guest .text{
+    font-size: 1.2em;
+}
+.profile .profile-text-auth{
+    margin-top: 0;
+}
+.profile .profile-text-auth .welcome-text{
+    font-size: 1.3em;
+}

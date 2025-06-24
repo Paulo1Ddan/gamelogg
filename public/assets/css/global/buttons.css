@@ -1,0 +1,31 @@
+.btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #180161;
+}
+.btn-primary:hover {
+    background-color: #130f4b;
+}
+.btn-primary:active{
+    background-color: #0d0c3f;
+}
+
+.btn-secondary {
+    background-color: #4F1787;
+}
+.btn-secondary:hover {
+    background-color: #3f1370;
+}
+.btn-secondary:active{
+    background-color: #2f0f5a;
+}

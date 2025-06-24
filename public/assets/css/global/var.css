@@ -1,0 +1,6 @@
+@import url(buttons.css);
+:root{
+    --color-primary: #07101d;
+    
+    --bg-color-primary: #222831;
+}

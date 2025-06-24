@@ -1,0 +1,39 @@
+.games .title{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.games .game{
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.games .game .game-image{
+    width: 100%;
+    height: 100%;
+}
+.games .game .game-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.games .game .game-name{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.games .game:hover .game-name{
+    background-color: rgba(0, 0, 0, 0.468);
+    visibility: visible;
+}

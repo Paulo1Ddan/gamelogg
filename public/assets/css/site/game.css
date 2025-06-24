@@ -1,0 +1,28 @@
+.game .banner .bg-overlay {
+    height: 100%;
+    background-color: #222831a8;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.game .bg-overlay .game-title{
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.game .content{
+    height: 100%;
+}
+.game .content .game-cover{
+    min-width: 230px;
+    height: 310px;    
+}
+.game .content .game-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.game .content .game-info{
+    height: 100%;
+}
