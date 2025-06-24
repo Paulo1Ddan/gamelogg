@@ -1,4 +1,4 @@
-# 🎮 BacklogGames - Gerenciador de Jogos Simples com IGDB
+# 🎮 Gamelogg - Gerenciador de Jogos Simples com IGDB
 
 Este projeto é uma versão simplificada e personalizada inspirada no **Backloggd**, permitindo que você gerencie sua lista de jogos com integração à API do [IGDB](https://www.igdb.com/). A plataforma foi desenvolvida com foco em simplicidade e usabilidade.
 
@@ -109,7 +109,7 @@ IGDB_ACCESS_TOKEN=seu_access_token
 
 ---
 
-## 📸 Screenshots
+<!-- ## 📸 Screenshots
 
 *(Adicione aqui prints do projeto em funcionamento caso desejar)*
 
@@ -133,7 +133,7 @@ IGDB_ACCESS_TOKEN=seu_access_token
 └── tests
 ```
 
-<!-- ---
+---
 
 ## 🧑‍💻 Contribuindo
 
