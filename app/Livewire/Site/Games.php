@@ -48,10 +48,11 @@ class Games extends Component
 
         switch ($this->currentFilter) {
             case 'popular':
-                $games = $games->orderBy('total_rating_count', 'desc')
-                    ->orderBy('aggregated_rating_count', 'desc')
-                    ->orderBy('total_rating', 'desc')
-                    ->orderBy('hypes', 'desc');
+                $games = $games->orderBy('popularity ', 'desc')
+                    ->orderBy("rating", "desc")
+                    ->orderBy("total_rating", "desc")
+                    ->orderBy("total_rating_count", "desc")
+                    ->orderBy("hypes", "desc");
                 break;
 
             case 'alphabetical':
@@ -65,18 +66,16 @@ class Games extends Component
                 break;
 
             case 'top-rated':
-                $games = Game::select(['name', 'slug'])
-                    ->with(['cover'])
-                    ->where('themes', "!=", 42)
-                    ->where('name', '!=', 'Hentai')
-                    ->orderBy('total_rating', 'desc');
+                $games = $games->orderBy("rating", "desc")
+                    ->orderBy("rating_count", "desc");
                 break;
 
             default:
-                $games = $games->orderBy('total_rating_count', 'desc')
-                    ->orderBy('aggregated_rating_count', 'desc')
-                    ->orderBy('total_rating', 'desc')
-                    ->orderBy('hypes', 'desc');
+                $games = $games->orderBy('popularity ', 'desc')
+                    ->orderBy("rating", "desc")
+                    ->orderBy("total_rating", "desc")
+                    ->orderBy("total_rating_count", "desc")
+                    ->orderBy("hypes", "desc");
                 break;
         }
 

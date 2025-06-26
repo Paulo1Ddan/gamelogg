@@ -24,6 +24,7 @@ Antes de começar, você precisará ter instalado:
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Composer](https://getcomposer.org/)
+- [Laradock](https://laradock.io/)
 - Conta e chave de API do [IGDB](https://api-docs.igdb.com/)
 
 ---

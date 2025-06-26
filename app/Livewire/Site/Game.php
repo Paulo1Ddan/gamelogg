@@ -4,6 +4,7 @@ namespace App\Livewire\Site;
 
 use App\Models\UserFavorite;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 use MarcReichel\IGDBLaravel\Models\Game as IGDBGame;
 use Throwable;
@@ -30,7 +31,7 @@ class Game extends Component
         $platforms = $game->platforms;
         $genres = $game->genres;
 
-        $this->hasFavorite = UserFavorite::where("game_id", $this->gameId)->where("user_id", auth()->user()->id)->exists();
+        if (auth()->check()) $this->hasFavorite = UserFavorite::where("game_id", $this->gameId)->where("user_id", auth()->user()->id)->exists();
 
         return view('livewire.site.game', ["game" => $game, "companies" => $companies, "platforms" => $platforms, "genres" => $genres, "teste" => $this->teste])->title($game->name);
     }

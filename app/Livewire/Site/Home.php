@@ -12,24 +12,28 @@ class Home extends Component
     public function render()
     {
         $games = Game::select(['name', 'slug'])
-                        ->with(['cover'])
-                        ->limit(10)
-                        ->orderBy('total_rating_count', 'desc')
-                        ->orderBy('aggregated_rating_count', 'desc')
-                        ->get();
+            ->with(['cover'])
+            ->limit(10)
+            ->orderBy('total_rating_count', 'desc')
+            ->orderBy('aggregated_rating_count', 'desc')
+            ->orderBy('total_rating', 'desc')
+            ->orderBy('hypes', 'desc')
+            ->get();
 
         $recentGames = Game::with(['cover'])
-                            ->limit(10)
-                            ->whereBetween('first_release_date', now()->subDays(30), now())
-                            ->orderBy('first_release_date', 'desc')
-                            ->orderBy('total_rating_count', 'desc')
-                            ->get();
+            ->limit(10)
+            ->whereBetween('first_release_date', now()->subDays(30), now())
+            ->orderBy('total_rating_count', 'desc')
+            ->orderBy('aggregated_rating_count', 'desc')
+            ->orderBy('total_rating', 'desc')
+            ->orderBy('hypes', 'desc')
+            ->get();
 
         $logs = [];
-        if (auth()->check()){
+        if (auth()->check()) {
             $logs = Gamelog::where("user_id", auth()->user()->id)->orderBy('created_at', 'desc')
-                            ->limit(5)
-                            ->get();
+                ->limit(5)
+                ->get();
         }
 
 
